@@ -1,0 +1,68 @@
+{
+    "manifestVersion": 1,
+    "id": "vsts-datadogevents",
+    "name": "Datadog Event",
+    "version": "0.1.9",
+    "publisher": "WilliamMatheusBatista",
+    "public": true,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "An extension to publish events to Datagog.",
+    "icons": {
+        "default": "extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "tasks/datadogevents"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "vsts-datadogevents",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/datadogevents"
+            }
+        }
+    ],
+    "categories": [
+        "Build and release"
+    ],
+    "tags": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build",
+        "Release",
+        "Datadog"
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "license.md"
+        }
+    },
+    "links": {
+        "home": {
+            "uri": "https://github.com/billbatista/vsts-datadogevents"
+        },
+        "repository": {
+            "uri": "https://github.com/billbatista/vsts-datadogevents"
+        },
+        "issues": {
+            "uri": "https://github.com/billbatista/vsts-datadogevents/issues"
+        }
+    },
+    "screenshots": [
+        {
+            "path": "tasks/datadogevents/screenshots/task.png"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "8a78eb22-4a8f-4b6a-a8c8-115201498967",
+    "name": "DatadogEvents",
+    "friendlyName": "Datadog Events",
+    "description": "Send events to Datadog",
+    "helpMarkDown": "",
+    "category": "Azure Pipelines",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "author": "William Matheus Batista",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 9
+    },
+    "instanceNameFormat": "Datadog Event",
+    "inputs": [
+        {
+            "name": "ddApiKey",
+            "type": "string",
+            "label": "Datadog's API key",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "[Datadog's API key.](https://docs.datadoghq.com/account_management/api-app-keys/)"
+        },
+        {
+            "name": "ddEventTitle",
+            "type": "string",
+            "label": "Event title",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The event title. Limited to 100 characters."
+        },
+        {
+            "name": "ddEventText",
+            "type": "multiLine",
+            "label": "Event text",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The body of the event. Limited to 4000 characters."
+        },
+        {
+            "name": "ddEventPriority",
+            "type": "pickList",
+            "label": "Event priority",
+            "defaultValue": "normal",
+            "required": false,
+            "options": {
+                "normal": "normal",
+                "low": "low"
+            },
+            "helpMarkDown": "The priority of the event: normal or low. Default: normal."
+        },
+        {
+            "name": "ddEventTags",
+            "type": "string",
+            "label": "Event tags",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "A list of tags to apply to the event. Default: none. Example: [\"environment:test\"]"
+        },
+        {
+            "name": "ddEventAlertType",
+            "type": "pickList",
+            "label": "Event alert type",
+            "defaultValue": "info",
+            "required": false,
+            "options": {
+                "error": "error",
+                "warning": "warning",
+                "info": "info",
+                "success": "success"
+            },
+            "helpMarkDown": "If it’s an alert event, set its type between: error, warning, info, and success."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
