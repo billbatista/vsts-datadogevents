@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "vsts-datadogevents",
     "name": "Datadog Event",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "publisher": "WilliamMatheusBatista",
     "public": true,
     "targets": [
@@ -10,7 +10,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
-    "description": "An extension to publish events to Datagog.",
+    "description": "An extension to publish events to Datadog.",
     "icons": {
         "default": "extension-icon.png"
     },
@@ -53,12 +53,13 @@
         "home": {
             "uri": "https://github.com/billbatista/vsts-datadogevents"
         },
-        "repository": {
-            "uri": "https://github.com/billbatista/vsts-datadogevents"
-        },
         "issues": {
             "uri": "https://github.com/billbatista/vsts-datadogevents/issues"
         }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/billbatista/vsts-datadogevents"
     },
     "screenshots": [
         {
