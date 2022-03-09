@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "azure-pipelines-task-lib": "^2.9.3",
     "vsts-task-lib": "^2.6.1"
   },
